@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+        <section id="add_book">
+            <form action="#" id="book-form">
+                <div class="header">
+                    <h2>Tambahkan Buku</h2>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Judul</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Penulis</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Tahun</label>
+                    <input type="number" id="year" required>
+                </div>
+                <div class="input_inline">
+                    <label for="inputBookIsComplete">Selesai dibaca</label>
+                    <input id="inputBookIsComplete" type="checkbox">
+                </div>
+                <button id="bookSubmit" type="submit">Masukkan Buku ke dalam rak</button>
+            </form>
+        </section>
+        <section id="edit_book" hidden>
+            <form action="#" id="book-edit">
+                <div class="header">
+                    <h2>Edit Buku</h2>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Judul</label>
+                    <input type="text" id="edtitle" required>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Penulis</label>
+                    <input type="text" id="edauthor" required>
+                </div>
+                <div class="input">
+                    <label for="bookTitle">Tahun</label>
+                    <input type="number" id="edyear" required>
+                </div>
+                <div class="input_inline">
+                    <label for="inputBookIsComplete">Selesai dibaca</label>
+                    <input id="edinputBookIsComplete" type="checkbox">
+                </div>
+                <button id="bookSubmit" type="submit">Masukkan Buku ke dalam rak</button>
+            </form>
+            <button id="cancel" onclick="batal()" type="submit">Kembali</button>
+        </section>
+        <aside>
+            <section class="unfinished">
+                <div class="header">
+                    <h2>Rak Belum Selesai</h2>
+                </div>
+                <div class="list" id="unfinished-book">
+            </section>
+            <section class="finished">
+                <div class="header">
+                    <h2>Rak Selesai</h2>
+                </div>
+                <div class="list" id="finished-book">
+            </section>
+        </aside>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <footer>
+        <p>&copy; 2022 - <a href="https://www.github.com/naufalalief" target="_blank">Naufal Alief</a></p>
+    </footer>
+</body>
+
+</html>
