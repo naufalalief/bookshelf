@@ -82,18 +82,26 @@ function makeBook(bookObject) {
     textFinished.append(textContainer);
     textFinished.setAttribute('data-id', `book-${bookObject.id}`);
 
+    const undoButton = document.createElement('button');
+    undoButton.innerText = 'Belum Selesai';
+    undoButton.classList.add('undo-button', 'btn');
+
+    const trashButton = document.createElement('button');
+    trashButton.innerText = 'Hapus Buku';
+    trashButton.classList.add('delete-button', 'btn');
+
+    const finishButton = document.createElement('button');
+    finishButton.innerText = 'Selesai dibaca';
+    finishButton.classList.add('finish-button', 'btn');
+
+    const editButton = document.createElement('button');
+    editButton.innerText = 'Edit Buku';
+    editButton.classList.add('edit-button', 'btn');
 
     if (bookObject.isFinished) {
-        const undoButton = document.createElement('button');
-        undoButton.innerText = 'Belum Selesai';
-        undoButton.classList.add('undo-button');
-
         undoButton.addEventListener('click', () => {
             undoBook(bookObject.id);
         });
-        const trashButton = document.createElement('button');
-        trashButton.innerText = 'Hapus Buku';
-        trashButton.classList.add('trash-button');
         trashButton.addEventListener('click', () => {
             if (confirm('Apakah anda yakin ingin menghapus buku ini?')) {
                 deleteBook(bookObject.id);
@@ -104,20 +112,21 @@ function makeBook(bookObject) {
         });
         textFinished.append(undoButton, trashButton);
     } else {
-        const finishButton = document.createElement('button');
-        finishButton.innerText = 'Selesai dibaca';
-        finishButton.classList.add('finish-button');
-
+        trashButton.addEventListener('click', () => {
+            if (confirm('Apakah anda yakin ingin menghapus buku ini?')) {
+                deleteBook(bookObject.id);
+            }
+            else {
+                return;
+            }
+        });
         finishButton.addEventListener('click', () => {
             finishBook(bookObject.id);
         });
-        const editButton = document.createElement('button');
-        editButton.innerText = 'Edit Buku';
-        editButton.classList.add('edit-button');
         editButton.addEventListener('click', () => {
             editBook(bookObject.id);
         });
-        textFinished.append(finishButton, editButton);
+        textFinished.append(finishButton, editButton, trashButton);
     }
 
     return textFinished;

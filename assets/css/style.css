@@ -21,10 +21,15 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: #007dc1;
-    color: white;
+    margin: auto;
+}
+.footer{
     text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a{
@@ -156,7 +161,6 @@ aside {
 }
 
 .item-shadow {
-    position: relative;
     display: block;
     background-color: whitesmoke;
     border: #007dc1 2px solid;
@@ -170,8 +174,6 @@ aside {
 }
 
 .finish-button {
-    position: absolute;
-    right: 10px;
     background-color: #44c767;
     height: auto;
     border-radius: 14px;
@@ -190,10 +192,7 @@ aside {
     background-color: #5cbf2a;
 }
 
-.trash-button {
-    margin-left: 10px;
-    position: absolute;
-    right: 10px;
+.delete-button {
 	background-color:#fe1a00;
 	border-radius:14px;
 	border:1px solid #d83526;
@@ -207,7 +206,7 @@ aside {
 	text-shadow:0px 1px 0px #b23e35;
 }
 
-.trash-button:hover {
+.delete-button:hover {
     background-color:#ff3b2b;
 }
 
@@ -242,4 +241,9 @@ aside {
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #cc9f52;
+}
+
+.btn{
+    margin-left: 10px;
+    margin-right: 10px;
 }
