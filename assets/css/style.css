@@ -17,7 +17,7 @@ header {
     text-align: center;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -25,14 +25,15 @@ footer{
     background: #007dc1;
     margin: auto;
 }
-.footer{
+
+.footer {
     text-align: center;
     color: white;
     display: flex;
     justify-content: space-around;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: white;
 }
@@ -41,6 +42,7 @@ main {
     padding: 16px;
     width: 100%;
     display: flex;
+    padding-bottom: 70px;
 }
 
 #add_book {
@@ -112,21 +114,21 @@ main {
 button[type=submit] {
     margin-top: 10px;
     width: 100%;
-	background-color:#007dc1;
-	border-radius:14px;
-	border:1px solid #124d77;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #154682;
+    background-color: #007dc1;
+    border-radius: 14px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
 }
 
 button[type=submit]:hover {
-    background-color:#0061a7;
+    background-color: #0061a7;
 }
 
 aside {
@@ -160,6 +162,26 @@ aside {
     border-radius: 10px;
 }
 
+#finished-book {
+    flex-direction: row;
+    width: 100%;
+}
+
+.searchBook {
+    display: block;
+    flex-direction: column;
+    padding: 16px;
+    margin: 2px;
+    border: 2px solid #007dc1;
+    border-radius: 10px;
+}
+
+#searchResults {
+    flex-direction: row;
+    width: 100%;
+    padding-top: 10px;
+}
+
 .item-shadow {
     display: block;
     background-color: whitesmoke;
@@ -169,7 +191,7 @@ aside {
     padding: 10px;
 }
 
-.text-container > .finish-button{
+.text-container>.finish-button {
     right: 0;
 }
 
@@ -193,21 +215,21 @@ aside {
 }
 
 .delete-button {
-	background-color:#fe1a00;
-	border-radius:14px;
-	border:1px solid #d83526;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+    background-color: #fe1a00;
+    border-radius: 14px;
+    border: 1px solid #d83526;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #b23e35;
 }
 
 .delete-button:hover {
-    background-color:#ff3b2b;
+    background-color: #ff3b2b;
 }
 
 .undo-button {
@@ -229,21 +251,21 @@ aside {
     background-color: #5cbf2a;
 }
 
-.edit-button{
-	background-color:#ffc477;
-	border-radius:14px;
-	border:1px solid #eeb44f;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #cc9f52;
+.edit-button {
+    background-color: #ffc477;
+    border-radius: 14px;
+    border: 1px solid #eeb44f;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #cc9f52;
 }
 
-.btn{
+.btn {
     margin-left: 10px;
     margin-right: 10px;
 }

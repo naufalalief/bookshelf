@@ -16,27 +16,28 @@
     </header>
     <main>
         <section id="add_book">
-            <form action="#" id="book-form">
+            <form action="#" id="book-form" data-testid="bookForm">
                 <div class="header">
                     <h2>Tambahkan Buku</h2>
                 </div>
                 <div class="input">
                     <label for="bookTitle">Judul</label>
-                    <input type="text" id="title" required>
+                    <input type="text" id="title" required data-testid="bookFormTitleInput">
                 </div>
                 <div class="input">
                     <label for="bookTitle">Penulis</label>
-                    <input type="text" id="author" required>
+                    <input type="text" id="author" required data-testid="bookFormAuthorInput">
                 </div>
                 <div class="input">
                     <label for="bookTitle">Tahun</label>
-                    <input type="number" id="year" required>
+                    <input type="number" id="year" required data-testid="bookFormYearInput">
                 </div>
                 <div class="input_inline">
                     <label for="inputBookIsComplete">Selesai dibaca</label>
-                    <input id="inputBookIsComplete" type="checkbox">
+                    <input id="inputBookIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox">
                 </div>
-                <button id="bookSubmit" type="submit">Masukkan Buku ke dalam rak</button>
+                <button id="bookSubmit" type="submit" data-testid="bookFormSubmitButton">Masukkan Buku ke dalam
+                    rak</button>
             </form>
         </section>
         <section id="edit_book" hidden>
@@ -69,20 +70,31 @@
                 <div class="header">
                     <h2>Rak Belum Selesai</h2>
                 </div>
-                <div class="list" id="unfinished-book">
+                <div class="list" id="unfinished-book" data-testid="incompleteBookList"></div>
             </section>
             <section class="finished">
                 <div class="header">
                     <h2>Rak Selesai</h2>
                 </div>
-                <div class="list" id="finished-book">
+                <div class="list" id="finished-book" data-testid="completeBookList"></div>
+            </section>
+            <section class="searchBook">
+                <div class="header">
+                    <h2>Cari Buku</h2>
+                </div>
+                <form id="searchBook" data-testid="searchBookForm" class="input">
+                    <label for="searchBookTitle">Judul</label>
+                    <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+                    <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+                </form>
+                <div id="searchResults"></div>
             </section>
         </aside>
     </main>
     <script src="assets/js/script.js"></script>
     <footer>
         <div class="footer">
-            <p>&copy; 2022 - <a href="https://www.github.com/naufalalief" target="_blank">Naufal Alief</a></p>
+            <p>&copy; 2024 - <a href="https://www.github.com/naufalalief" target="_blank">Naufal Alief</a></p>
         </div>
     </footer>
 </body>
